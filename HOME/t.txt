@@ -1,0 +1,5 @@
+В папку HOME закидываем все коды с сортировкой по лабы_темы_редактор
+|
+-> Lab1_massivi_tereshchenko
+-> Lab2_matr_tereshcheneko
+->...
