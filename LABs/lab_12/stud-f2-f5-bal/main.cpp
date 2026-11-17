@@ -13,6 +13,7 @@ struct stud{
 
 stud *readstud(char *, int *);
 
+void form(stud &);
 
 int main(void){
     stud *z; int i,j,k,n,m;
@@ -27,6 +28,7 @@ int main(void){
         cout<<"\n";
     }
     
+    /*
     for (i = 0; i < n; i++){
         z[i].bal=0;
         z[i].f2=0;
@@ -39,7 +41,10 @@ int main(void){
             z[i].bal+=z[i].ocen[j];
         }
         z[i].bal/=z[i].m;
-        
+    */
+    for (i = 0; i < n; i++){
+        form(z[i]);
+
     }
     for (i = 0; i < n; i++){
         cout<<i<<": "<<z[i].f2<<" ";
@@ -49,6 +54,21 @@ int main(void){
     }
 
 }
+void form(stud &z){
+    int j;
+        z.bal=0;
+        z.f2=0;
+        z.f5=0;
+        for(j=0;j<z.m;j++){
+            if (z.ocen[j]==2)
+                z.f2+=1;
+            if (z.ocen[j]==5)
+                z.f5+=1;
+            z.bal+=z.ocen[j];
+        }
+        z.bal/=z.m;
+}
+
 
 stud *readstud(char *name, int *n1){
     stud *z;
